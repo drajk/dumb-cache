@@ -1,6 +1,6 @@
 {
   "name": "dumb-cache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A light-weight in-memory cache which does one thing better",
   "main": "src/index.js",
   "scripts": {
