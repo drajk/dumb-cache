@@ -13,7 +13,21 @@ It only does one thing ie: caching and does it better.
 const dumbCache = require('dumb-cache');
 ```
 
-### Add to `cache` and rehydrate when data expires
+### `Without` rehydration
+
+```javascript
+const UNIQUE_CACHE_KEY = '__unique_cache_key__';
+const EXPIRE_AFTER = 60 * 1000; // milliseconds
+
+// add to cache
+dumbCache.put(UNIQUE_CACHE_KEY, data, EXPIRE_AFTER);
+
+// retrieve from cache
+dumbCache.get(UNIQUE_CACHE_KEY)
+
+```
+
+### `With` rehydration when data expires
 
 ```javascript
 const UNIQUE_CACHE_KEY = '__unique_cache_key__';
@@ -31,9 +45,9 @@ dumbCache.get(UNIQUE_CACHE_KEY, async() => {
 
 
 // rinse & repeat for more items in cache 
-dumbCache.get(`SOME_KEY`, async() => {
+dumbCache.get('SOME_KEY', async() => {
     // rehydrate
-    dumbCache.put(`SOME_KEY`, someData, 30000);
+    dumbCache.put('SOME_KEY', someData, 30000);
 })
 ```
 
@@ -51,7 +65,7 @@ dumbCache.clear();
 ### Get all keys from `cache`
 
 ```javascript
-dumbCache.keys();
+const allKeys = dumbCache.keys;
 ```
 
 ### License: [GNU](https://www.gnu.org/licenses/gpl-3.0.en.html)

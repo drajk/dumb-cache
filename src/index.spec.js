@@ -72,6 +72,10 @@ describe('DumbCache', () => {
             jest.useFakeTimers();
         });
 
+        it('should work without rehydate()', () => {
+            expect(dumbCache.get('miss')).toBeNull();
+        });
+
         it('should return null given a key for an empty cache', () => {
             expect(dumbCache.get('miss', () => {})).toBeNull();
         });
