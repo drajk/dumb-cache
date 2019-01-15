@@ -1,5 +1,5 @@
 # Why dumb-cache?
-`dumb-cache` is a light-weight in-memory cache with 0 dependencies.
+`dumb-cache` is a light-weight in-memory cache with `zero` dependencies.
 It only does one thing ie: caching and does it better.
 
 
@@ -20,7 +20,7 @@ const UNIQUE_CACHE_KEY = '__unique_cache_key__';
 const EXPIRE_AFTER = 60 * 1000; // milliseconds
 
 dumbCache.get(UNIQUE_CACHE_KEY, async() => {
-    // rehydration logic eg: get data from api
+    // get data from an API or any other rehydration logic
     const data = {
         fancy: 'data'
     };
@@ -30,7 +30,7 @@ dumbCache.get(UNIQUE_CACHE_KEY, async() => {
 })
 
 
-// now rince-and-repeat for more items in cache 
+// rinse & repeat for more items in cache 
 dumbCache.get(`SOME_KEY`, async() => {
     // rehydrate
     dumbCache.put(`SOME_KEY`, someData, 30000);
@@ -55,5 +55,3 @@ dumbCache.keys();
 ```
 
 ### License: [GNU](https://www.gnu.org/licenses/gpl-3.0.en.html)
-
-### Send me a pull request for any new features you might want to add this this repository

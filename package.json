@@ -1,7 +1,7 @@
 {
   "name": "dumb-cache",
-  "version": "1.0.1",
-  "description": "A light-weight in-memory cache which does one thing better",
+  "version": "1.0.2",
+  "description": "a light-weight in-memory cache with zero dependencies. It only does one thing ie: caching and does it better.",
   "main": "src/index.js",
   "scripts": {
     "test": "jest --watch --coverage",
