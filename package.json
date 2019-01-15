@@ -1,0 +1,36 @@
+{
+  "name": "dumb-cache",
+  "version": "1.0.0",
+  "description": "A light-weight in-memory cache which does one thing better",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --watch --coverage",
+    "coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drajk/dumb-cache.git"
+  },
+  "keywords": [
+    "cache",
+    "in-memory",
+    "nodejs",
+    "lightweight"
+  ],
+  "author": "drajk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drajk/dumb-cache/issues"
+  },
+  "homepage": "https://github.com/drajk/dumb-cache#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/path/to/dir/"
+    ]
+  }
+}
