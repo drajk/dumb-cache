@@ -70,10 +70,9 @@ class DumbCache {
 
     // rehydrate the cache
     if (typeof rehydrate === 'function' && this.shouldRehydrate(key)) {
-      data = {
-          ...data,
-          value: data ? data.value : null,
-          isRehydrating: true,
+      this._cache[key] = {
+        ...data,
+        isRehydrating: true,
       };
 
       rehydrate();
