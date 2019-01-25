@@ -3,6 +3,9 @@
 It only does one thing ie: caching and does it better.
 
 
+## Github stars
+Star [Dumb-cache on GitHub](https://github.com/drajk/dumb-cache) if you like this package.
+
 ## Installation
 
     npm install dumb-cache --save
